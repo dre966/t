@@ -1,8 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
 <script>
 fetch("https://oauth.deriv.com/oauth2/sessions/active", {
     credentials: "include"
 })
 .then(r => r.text())
-.then(console.log)
-.catch(console.error);
+.then(t => console.log("RESULT:", t))
+.catch(e => console.log("ERROR:", e));
 </script>
+</body>
+</html>
