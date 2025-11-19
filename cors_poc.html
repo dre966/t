@@ -1,0 +1,8 @@
+<script>
+fetch("https://oauth.deriv.com/oauth2/sessions/active", {
+    credentials: "include"
+})
+.then(r => r.text())
+.then(console.log)
+.catch(console.error);
+</script>
