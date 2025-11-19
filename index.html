@@ -2,12 +2,15 @@
 <html>
 <body>
 <script>
-fetch("https://oauth.deriv.com/oauth2/sessions/active", {
-    credentials: "include"
+fetch("https://green.derivws.com/websockets/get_settings?app_id=65208&l=en&brand=deriv", {
+  credentials: "include",
+  headers: { "X-Token": "YOUR_TOKEN_HERE" }
 })
 .then(r => r.text())
-.then(t => console.log("RESULT:", t))
-.catch(e => console.log("ERROR:", e));
+.then(console.log)
+.catch(console.error);
 </script>
+
 </body>
 </html>
+
